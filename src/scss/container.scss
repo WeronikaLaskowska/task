@@ -1,0 +1,20 @@
+@use "variables";
+
+.container {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 30px;
+  @media screen and (max-width: map-get(variables.$sizes, lg)) {
+    padding: 10px;
+    gap: 5px;
+  }
+  padding: 30px;
+  @media screen and (max-width: map-get(variables.$sizes, sm)) {
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+}
